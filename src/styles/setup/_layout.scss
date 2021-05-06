@@ -1,0 +1,26 @@
+.view {
+  height: calc(100vh - #{$height-appbar});
+}
+
+.container {
+  padding: 1rem;
+
+  &.container--view {
+    background-color: #f6f6f6;
+  }
+}
+
+@media (min-width: 1400px) {
+  .view {
+    height: calc(100vh - #{$height-appbar-large});
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &.container--view {
+      background-color: #ffffff;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.wrapper-app-bar {
+  background-color: $color-primary;  
+}
+
+.app-bar {
+  align-items: center;
+  background-color: $color-primary;
+  display: flex;
+  justify-content: space-between;
+  height: $height-appbar;
+  transition: all 0.3s ease;
+}
+
+.app-bar__logo {
+  width: 140px;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 1400px) {
+  .app-bar {
+    height: $height-appbar-large;
+  }
+
+  .app-bar__logo {
+    width: 200px;
+  }
+
+  .app-bar__btn-menu {
+    display: none;
+  }
+}

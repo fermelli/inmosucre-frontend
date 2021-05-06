@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="135.999" height="32" viewBox="0 0 135.999 32">
+  <g id="logo" transform="translate(-36 -10)">
+    <text id="InmoSUCRE" transform="translate(69.999 38.999)" fill="#fff" font-size="15" font-family="Rockwell-Bold, Rockwell" font-weight="700" letter-spacing="0.03em"><tspan x="0" y="0">INMOSUCRE</tspan></text>
+    <text id="Encuentra_tu_Casa_Perfecta" data-name="Encuentra tu Casa Perfecta" transform="translate(75.999 22.999)" fill="#fff" font-size="6" font-family="Rockwell" letter-spacing="0.03em"><tspan x="0" y="0">Encuentra tu Casa Perfecta</tspan></text>
+    <rect id="Rectángulo_15" data-name="Rectángulo 15" width="95" height="1.25" transform="translate(75.999 25.999)" fill="#fff"/>
+    <path id="Sustracción_3" data-name="Sustracción 3" d="M-775.5-113h-10V-127.77H-793L-773-145l7.5,6.461v5.846h5v-1.537l7.5,6.459h-7.5V-113h-10v-7.5h-5v7.5Zm2.5-19.75a2.5,2.5,0,0,0-2.5,2.5,2.5,2.5,0,0,0,2.5,2.5,2.5,2.5,0,0,0,2.5-2.5A2.5,2.5,0,0,0-773-132.75Zm12.5-1.48,0,0-5-4.307v-6.377h5v10.686Z" transform="translate(829 155)" fill="#fff"/>
+  </g>
+</svg>

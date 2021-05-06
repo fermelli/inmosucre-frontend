@@ -1,0 +1,120 @@
+.wrapper-nav {
+  position: absolute;
+  background-color: $color-wrapper;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.nav__controls {
+  align-items: center;
+  border-bottom: 1px solid #b4b4b4;
+  display: flex;
+  height: $height-appbar;
+  justify-content: flex-end;
+  padding: 0.5rem 1rem;
+}
+
+.nav {
+  background-color: $color-secondary;
+  height: 100vh;
+  max-width: 272px;
+  width: 272px;
+}
+
+.nav__list {
+  padding: 0.5rem 1rem;
+}
+
+.nav__list-item {
+  margin: 0.25rem 0 0.5rem 0;
+}
+
+.nav__link {
+  border-radius: 0.25rem;
+  color: $color-on-primary;
+  display: block;
+  font-weight: 400;
+  font-size: 1.125rem;
+  padding: 0.5rem 1rem;
+
+  &.router-link-exact-active {
+    background-color: $color-on-primary;
+    color: $color-secondary;
+  }
+
+  &:hover:not(.router-link-exact-active) {
+    background-color: $color-secondary-hover;
+    transition: all 0.7s ease;
+    transition-property: background-color, color;
+  }
+}
+
+.slide-left-enter-active {
+  animation: slide-left 0.5s;
+}
+.slide-left-leave-active {
+  animation: slide-left 0.5s reverse both;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@media (min-width: 1400px) {
+  .wrapper-nav {
+    position: relative;
+    background-color: transparent;
+  }
+
+  .nav__controls {
+    display: none;
+  }
+
+  .nav {
+    background-color: $color-primary;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .nav__list {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    margin: 0 2rem;
+  }
+
+  .nav__list-item {
+    margin: 0.25rem 0;
+  }
+
+  .nav__link {
+    background-color: $color-primary;
+    border-radius: 0;
+    color: $color-on-primary;
+
+    &.router-link-exact-active {
+      background-color: $color-primary;
+      border-bottom: 2px solid $color-on-primary;
+      border-radius: 0;
+      color: $color-on-primary;
+    }
+
+    &:hover:not(.router-link-exact-active) {
+      background-color: $color-primary-hover;
+    }
+  }
+
+  .slide-left-enter-active {
+    animation: none;
+  }
+  .slide-left-leave-active {
+    animation: none;
+  }
+}
