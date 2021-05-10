@@ -1,9 +1,11 @@
 .btn {
   align-items: center;
+  font-weight: bold;
   background-color: #ffffff;
   border: none;
   cursor: pointer;
   display: flex;
+  text-transform: uppercase;
   justify-content: center;
   padding: 0.5rem;
   outline: none;
@@ -33,13 +35,11 @@
   }
 
   &.btn--contained {
-    font-weight: bold;
     height: 40px;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     min-width: 150px;
     padding: 0.75rem 1rem;
-    text-transform: uppercase;
     box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
 
     &.btn--primary-variant {
@@ -50,5 +50,15 @@
         background-color: $color-primary-variant-hover;
       }
     }
+  }
+
+  &.btn--outline {
+    height: 40px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    min-width: 150px;
+    padding: 0.75rem 1rem;
+    border: 1px solid $color-secondary;
+    color: $color-secondary;
   }
 }

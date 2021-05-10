@@ -1,58 +1,74 @@
 <template>
   <div>
     <div class="container container--view">
-      <div class="no-records">
-        <div class="no-records__container">
-          <h2 class="no-records__title">NO HAY AGENCIAS REGISTRADAS</h2>
-          <BaseIcon
-            class="no-records__icon"
-            name="no-agency-records"
-            width="140"
-            height="140"
+      <NoRecords
+        title="no hay agencias registradas"
+        icon-name="no-agency-records"
+        @click-button="openModal()"
+      />
+      <ModalComponent
+        :show-modal="showModal"
+        title="registrar agencias"
+        @close="closeModal()"
+      >
+        <template v-slot:body>
+          <FormAgency
+            :form-data="agency"
+            @reset="closeModal()"
+            @store-agency="storeAgency()"
           />
-          <button
-            class="no-records__btn btn btn--contained btn--primary-variant"
-          >
-            AÑADIR AGENCIA
-          </button>
-        </div>
-      </div>
+        </template>
+      </ModalComponent>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import NoRecords from "@/components/NoRecords.vue";
+import ModalComponent from "@/components/ModalComponent.vue";
+import FormAgency from "./FormAgency.vue";
+
+export default {
+  name: "Agency",
+  components: {
+    NoRecords,
+    ModalComponent,
+    FormAgency,
+  },
+  created() {
+    this.agency = this.createAgencyObject();
+  },
+  data() {
+    return {
+      showModal: false,
+      agency: {},
+    };
+  },
+  methods: {
+    createAgencyObject() {
+      return {
+        code: "",
+        address: "",
+        postalCode: "",
+        city: "",
+        fax: "",
+        actionZone: "",
+        phone: "",
+      };
+    },
+    openModal() {
+      this.agency = this.createAgencyObject();
+      this.showModal = true;
+    },
+    closeModal() {
+      this.agency = this.createAgencyObject();
+      this.showModal = false;
+    },
+    storeAgency() {
+      console.log(this.agency);
+    },
+  },
+};
 </script>
 
-<style lang="scss" scoped>
-.no-records {
-  background-color: #ffffff;
-  height: calc(100vh - 92px);
-}
-
-.no-records__container {
-  padding: 2rem 0;
-}
-
-.no-records__title {
-  color: #c1c1c1;
-  text-align: center;
-  padding: 0 1rem;
-}
-
-.no-records__icon {
-  display: block;
-  margin: 3rem auto;
-}
-
-.no-records__btn {
-  margin: 0 auto;
-}
-
-@media (min-width: 1400px) {
-  .no-records {
-    height: calc(100vh - 112px);
-  }
-}
-</style>
+<style lang="scss" scoped></style>
