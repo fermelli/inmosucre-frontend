@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import iconNames from "@/utils/icon-names.js";
+
 export default {
   name: "BaseIcon",
   props: {
@@ -16,7 +18,7 @@ export default {
       type: String,
       required: true,
       validator: (name) => {
-        return ["menu", "close", "no-agency-records"].indexOf(name) !== -1;
+        return iconNames.indexOf(name) !== -1;
       },
     },
     fill: {
