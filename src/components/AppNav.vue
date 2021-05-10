@@ -4,7 +4,7 @@
       <nav v-if="isOpen" class="nav">
         <div class="nav__controls">
           <button class="btn btn--round btn--secondary" @click="$emit('close')">
-            <BaseIcon name="close" height="20" width="20" fill="#ffffff" />
+            <BaseIcon name="close" height="24" width="24" fill="#ffffff" />
           </button>
         </div>
         <ul class="nav__list">
