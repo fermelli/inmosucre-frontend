@@ -7,6 +7,7 @@
       id="code"
       type="text"
       placeholder="Código de la Agencia"
+      maxlength="16"
       required
     />
     <BaseInput
@@ -25,6 +26,7 @@
       id="postal-code"
       type="text"
       placeholder="Código postal de la Agencia"
+      maxlength="16"
       required
     />
     <BaseCombobox
@@ -41,6 +43,7 @@
       id="fax"
       type="tel"
       placeholder="Código postal de la Agencia"
+      maxlength="16"
       required
     />
     <BaseCombobox
@@ -57,6 +60,7 @@
       id="phone"
       type="tel"
       placeholder="Teléfono de la Agencia"
+      maxlength="16"
       required
     />
     <div class="form__actions">

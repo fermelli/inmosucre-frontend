@@ -1,4 +1,6 @@
 .wrapper-app-bar {
+  position: relative;
+  z-index: 999;
   background-color: $color-primary;  
 }
 

@@ -24,6 +24,7 @@
 </template>
 
 <script>
+import service from "@/api/service.js";
 import NoRecords from "@/components/NoRecords.vue";
 import ModalComponent from "@/components/ModalComponent.vue";
 import FormAgency from "./FormAgency.vue";
@@ -64,8 +65,13 @@ export default {
       this.agency = this.createAgencyObject();
       this.showModal = false;
     },
-    storeAgency() {
-      console.log(this.agency);
+    async storeAgency() {
+      try {
+        const response = await service.post("/agencies", this.agency);
+        console.log(response);
+      } catch (error) {
+        console.log(error.response);
+      }
     },
   },
 };
